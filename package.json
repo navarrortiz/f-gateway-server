@@ -1,0 +1,9 @@
+{
+  "name": "ff-reverse-proxy",
+  "version": "0.1.0",
+  "description": "Fastify based reverse proxy",
+  "main": "index.js",
+  "repository": "https://github.com/navarrortiz/ff-reverse-proxy.git",
+  "author": "Antonio Navarro Ortiz <tonynavarro1984@gmail.com>",
+  "license": "GNU"
+}
