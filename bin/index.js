@@ -1,23 +1,30 @@
-const gateway = require('fast-gateway')
+try {
+  const config = require('../f-gateway.conf')
 
-const port = 8080;
+  const gateway = require('fast-gateway')
 
-const server = gateway({
-  middlewares: [
-    require('cors')(),
-    require('helmet')()
-  ],
-  routes: [{
-    prefix: '/ms-auth/*',
-    target: 'http://localhost:8085/ms-auth/*',
-  },{
-    prefix: '/ms-project/*',
-    target: 'http://localhost:8086/ms-project/*',
-  }],
-})
+  const port = config.port;
 
-server.start(port)
-  .then((address) => {
-    console.log(`f-gateway-server listening on http://localhost:${port}`);
+  const routes = config.routes;
+
+  const server = gateway({
+    middlewares: [
+      require('cors')(),
+      require('helmet')()
+    ],
+    routes,
   })
-  .catch(error => console.log(error));
+
+  server.start(port)
+    .then((address) => {
+      console.log(`f-gateway-server listening on http://localhost:${port}`)
+      console.log('Gateways:')
+      routes.map(route => {
+        console.log(`http://localhost:${port}${route.prefix} forwarded to => ${route.target}`)
+      });
+    })
+    .catch(error => console.log(error))
+} catch (error) {
+  console.log(error)
+}
+
