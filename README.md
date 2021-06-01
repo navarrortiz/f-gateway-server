@@ -1,2 +1,2 @@
-# ff-reverse-proxy
-Fastify based reverse proxy
+# f-gateway-server
+Start a gateway server with fast-gateway in seconds

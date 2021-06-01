@@ -1,9 +1,21 @@
 {
-  "name": "ff-reverse-proxy",
-  "version": "0.1.0",
-  "description": "Fastify based reverse proxy",
-  "main": "index.js",
-  "repository": "https://github.com/navarrortiz/ff-reverse-proxy.git",
-  "author": "Antonio Navarro Ortiz <tonynavarro1984@gmail.com>",
-  "license": "GNU"
+  "name": "f-gateway-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "bin": {
+    "f-gateway-server": "./bin/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "fast-gateway": "^2.9.3",
+    "helmet": "^4.6.0"
+  }
 }
