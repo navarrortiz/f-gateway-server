@@ -8,7 +8,7 @@
     "start": "node ."
   },
   "bin": {
-    "f-gateway-server": "bin/index.js"
+    "f-gateway-server": "./bin/index.js"
   },
   "repository": {
     "type": "git",
