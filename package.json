@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/navarrortiz/f-gateway-server.git"
+    "url": "git+https://github.com/navarrortiz/f-gateway-server.git"
   },
   "keywords": [
     "node",
@@ -39,5 +39,9 @@
     "cors": "^2.8.5",
     "fast-gateway": "^2.9.3",
     "helmet": "^4.6.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }
