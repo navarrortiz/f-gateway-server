@@ -1,7 +1,7 @@
 {
   "name": "f-gateway-server",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Gateway server",
   "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,9 +10,28 @@
   "bin": {
     "f-gateway-server": "./bin/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navarrortiz/f-gateway-server.git"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "proxy",
+    "api",
+    "gateway"
+  ],
+  "author": "Antonio Navarro Ortiz <navarrortiz1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/navarrortiz/f-gateway-server/issues"
+  },
+  "homepage": "https://github.com/navarrortiz/f-gateway-server#readme",
+  "files": [
+    "bin/*.js",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "cors": "^2.8.5",
     "fast-gateway": "^2.9.3",
