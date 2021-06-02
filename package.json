@@ -32,6 +32,9 @@
     "README.md",
     "LICENSE"
   ],
+  "engines": {
+    "node": ">=6"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "fast-gateway": "^2.9.3",
