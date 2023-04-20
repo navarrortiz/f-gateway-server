@@ -5,14 +5,21 @@ try {
 
   const port = config.port;
 
-  const routes = config.routes;
+  const routes = config.routes.map((route) => ({ prefixRewrite: route.prefix, ...route}));
+
+  const corsOptions = config.corsOptions || {};
 
   const server = gateway({
     middlewares: [
-      require('cors')(),
-      require('helmet')()
+      require('cors')(corsOptions),
+      require('helmet')(),
+    /* // log all requests
+     (req, res, next) => {
+        console.log({res});
+        return next();
+     },*/
     ],
-    routes,
+    routes
   })
 
   server.start(port)

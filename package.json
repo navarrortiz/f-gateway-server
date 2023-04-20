@@ -1,6 +1,6 @@
 {
   "name": "f-gateway-server",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Gateway server",
   "main": "bin/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "node ."
   },
   "bin": {
-    "f-gateway-server": "./bin/index.js"
+    "f-gateway-server": "node ./bin/index.js"
   },
   "repository": {
     "type": "git",
@@ -33,12 +33,12 @@
     "LICENSE"
   ],
   "engines": {
-    "node": ">=6"
+    "node": ">= 4.5.0"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "fast-gateway": "^2.9.3",
-    "helmet": "^4.6.0"
+    "fast-gateway": "^3.4.5",
+    "helmet": "^6.1.5"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
